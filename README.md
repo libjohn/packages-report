@@ -1,5 +1,38 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
+``` r
+library(tidyverse)
+```
+
+    ## Warning: package 'tidyverse' was built under R version 3.4.3
+
+    ## -- Attaching packages ---------------------------- tidyverse 1.2.1 --
+
+    ## v ggplot2 2.2.1.9000     v purrr   0.2.4     
+    ## v tibble  1.4.1          v dplyr   0.7.4     
+    ## v tidyr   0.7.2          v stringr 1.2.0     
+    ## v readr   1.1.1          v forcats 0.2.0
+
+    ## Warning: package 'tibble' was built under R version 3.4.3
+
+    ## Warning: package 'tidyr' was built under R version 3.4.3
+
+    ## Warning: package 'purrr' was built under R version 3.4.3
+
+    ## Warning: package 'dplyr' was built under R version 3.4.3
+
+    ## -- Conflicts ------------------------------- tidyverse_conflicts() --
+    ## x dplyr::filter() masks stats::filter()
+    ## x dplyr::lag()    masks stats::lag()
+
+``` r
+library(here)
+```
+
+    ## Warning: package 'here' was built under R version 3.4.3
+
+    ## here() starts at C:/Users/jrl/Desktop/packages-report
+
 packages-report
 ===============
 
@@ -19,11 +52,24 @@ Workshop challenge checklist
 Overview
 --------
 
-The goal of packages-report is to FINISH THIS SENTENCE.
+The goal of packages-report is to identify the frequency of built packages.
 
-I have `FILL THIS IN!!!` add-on packages installed.
+``` r
+sum(apt_freqtable$n) 
+#> [1] 216
+```
+
+I have `216` add-on packages installed.
 
 Here's how they break down in terms of which version of R they were built under, which is related to how recently they were updated on CRAN.
+
+    #> # A tibble: 4 x 3
+    #>   Built     n  prop
+    #>   <chr> <int> <dbl>
+    #> 1 3.4.0    70 0.324
+    #> 2 3.4.1    31 0.144
+    #> 3 3.4.2    29 0.134
+    #> 4 3.4.3    86 0.398
 
 ![](figs/built-barchart.png)
 
